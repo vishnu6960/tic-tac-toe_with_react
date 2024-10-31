@@ -1,9 +1,14 @@
-li{
+.playerInfo{
     border: 1px solid black;
     display: flex;
+    justify-content: space-around;
+    align-items: center;
     gap: 10px;
 }
 .player{
+    width: 70%;
+    /* border: 1px solid black; */
     display: flex;
-    gap: 20px;
+    justify-content: space-between;
+    /* gap: 100px; */
 }

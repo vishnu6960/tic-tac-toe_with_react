@@ -9,12 +9,12 @@ const App = () => {
     <>
       <main>
 
-        <div id='gameContainer' className='col-12 col-sm-10 col-md-8 col-xl-6'>
+        <div id='gameContainer' className='col-12 col-sm-10 col-md-9 col-lg-8 col-xl-6'>
 
-          <ol id='players' className='col-12'>
+          <div id='players' className='col-12 col-'>
             <Player name="Player 1" symbol="X" />
             <Player name="Player 2" symbol="O" />
-          </ol>
+          </div>
 
         </div>
         
