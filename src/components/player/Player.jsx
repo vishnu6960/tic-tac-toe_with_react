@@ -27,7 +27,7 @@ const Player = ({name, symbol}) => {
             {playerName}
             <span className='playerSymbol'> {symbol}</span>
         </span>
-        <button class="btn btn-light" onClick={handleEditFun}>{isEdit ? 'Save' : 'Edit'}</button>
+        <button className="btn btn-light" onClick={handleEditFun}>{isEdit ? 'Save' : 'Edit'}</button>
       </div>
     </>
   )

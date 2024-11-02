@@ -1,0 +1,26 @@
+#gameBoard{
+    border: 2px solid black;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.symbolRow{
+    border: 1px solid black;
+    /* width: 100%; */
+    height: 33.33%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+}
+.symbolCol{
+    border: 1px solid black;
+    width: 25%;
+}
+
+@media screen(max-width:400px) {
+    #gameBoard{
+
+    }
+}
