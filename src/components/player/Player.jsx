@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './Player.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-const Player = ({name, symbol}) => {
+const Player = ({name, symbol, isActive}) => {
   const [updatedName, setName] = useState(name)
   const [isEdit, setEdit] = useState(false)
 
@@ -22,10 +22,10 @@ const Player = ({name, symbol}) => {
 
   return (
     <>
-      <div className='playerInfo col-12 col-md-6'>
+      <div className={`playerInfo col-12 col-md-6 ${isActive ? 'active' : ''}`}>
         <span className='player'>
             {playerName}
-            <span className='playerSymbol'> {symbol}</span>
+            <span className='playerSymbol'> {symbol} </span>
         </span>
         <button className="btn btn-light" onClick={handleEditFun}>{isEdit ? 'Save' : 'Edit'}</button>
       </div>
