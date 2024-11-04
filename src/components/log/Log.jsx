@@ -1,10 +1,18 @@
-import React from 'react'
+import React from 'react';
+import './Log.css'
 
 const Log = ( {turns} ) => {
   return (
-    <ol>
+    // <ol>
+    //   {turns.map((turn) => (
+    //     <li key={`${turn.square.row}${turn.square.col}`}>{turn.player} selected {turn.square.row}, {turn.square.col}</li>
+    //   ))}
+    // </ol>
+    <ol id="log">
       {turns.map((turn) => (
-        <li key={`${turn.square.row}${turn.square.col}`}>{turn.player} selected {turn.square.row}, {turn.square.col}</li>
+        <li key={`${turn.square.row}${turn.square.col}`}>
+          {turn.player} selected {turn.square.row},{turn.square.col}
+        </li>
       ))}
     </ol>
   )

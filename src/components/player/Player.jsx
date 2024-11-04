@@ -2,12 +2,16 @@ import React, { useState } from 'react'
 import './Player.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-const Player = ({name, symbol, isActive}) => {
+const Player = ({name, symbol, isActive, onChangeName}) => {
   const [updatedName, setName] = useState(name)
   const [isEdit, setEdit] = useState(false)
 
   const handleEditFun = () => {
     setEdit((edit) => !edit)
+    if(isEdit){
+    onChangeName(symbol, updatedName)
+
+    }
   }
 
   const handleChange = (e) => {
