@@ -35,13 +35,9 @@ const App = () => {
     if( firstSquareSymbol && firstSquareSymbol === secondSquareSymbol && secondSquareSymbol === thirdSquareSymbol){
       winner = players[firstSquareSymbol]
       break
-      // console.log(winner)
     }
   }
 
-  // useEffect(() => {
-  //   console.log(gameTurns.length)
-  // }, [gameTurns])
   let isDraw = gameTurns.length == 9
 
   const handleSelectBox = (rowIndex, colIndex) => {
