@@ -1,9 +1,13 @@
 .playerInfo{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
     justify-content: space-around;
     align-items: center;
     gap: 10px;
+    margin-top: 10px;
+    color: white;
+    font-style: italic;
+    text-transform: uppercase;
 }
 .player{
     width: 70%;
@@ -12,7 +16,12 @@
     justify-content: space-between;
     /* gap: 100px; */
 }
+button{
+    height: 90%;
+    font-style: italic
+}
 
 .playerInfo.active{
-    border-color: rgb(247, 161, 2);
+    border-color: ;
+    border: 2px solid rgb(247, 161, 2) ;
 }

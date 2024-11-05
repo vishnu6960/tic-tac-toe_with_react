@@ -1,11 +1,12 @@
 import React from 'react'
+import './GameOver.css'
 
 const GameOver = ({winner, onRestart}) => {
   return (
-    <div>
+    <div id='game-over'>
       <h1>Game Over!!</h1>
-      {winner && <p>Winner : {winner}</p>}
-      {!winner && <p>It's a Draw</p>}
+      {winner && <h6>Winner : {winner}</h6>}
+      {!winner && <h6>It's a Draw</h6>}
       <button onClick={onRestart}>Restart</button>
     </div>
   )

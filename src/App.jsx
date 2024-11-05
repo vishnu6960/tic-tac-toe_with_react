@@ -13,7 +13,7 @@ const App = () => {
 
   const [players, setPlayers] = useState({
     'X' : 'Player 1',
-    'Y' : 'Player 2'
+    'O' : 'Player 2'
   })
   const [gameTurns , setGameTurns] = useState([])
   const [activePlayer, setActivePlayer] = useState('X')
@@ -22,7 +22,7 @@ const App = () => {
   for(const turn of gameTurns){
       const { square, player } = turn
       const { row, col } = square
-      console.log(player)
+      // console.log(player)
       gameBoard[row][col] = player
   }
 
@@ -38,7 +38,7 @@ const App = () => {
     }
   }
 
-  let isDraw = gameTurns.length == 9
+  let isDraw = gameTurns.length == 9 && !winner
 
   const handleSelectBox = (rowIndex, colIndex) => {
     setActivePlayer((currPlayer) => currPlayer === 'X' ? 'O' : 'X')

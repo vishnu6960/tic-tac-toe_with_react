@@ -31,7 +31,7 @@ const Player = ({name, symbol, isActive, onChangeName}) => {
             {playerName}
             <span className='playerSymbol'> {symbol} </span>
         </span>
-        <button className="btn btn-light" onClick={handleEditFun}>{isEdit ? 'Save' : 'Edit'}</button>
+        <button className="btn btn-secondary" onClick={handleEditFun}>{isEdit ? 'Save' : 'Edit'}</button>
       </div>
     </>
   )
