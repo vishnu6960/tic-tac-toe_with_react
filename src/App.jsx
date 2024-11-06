@@ -12,8 +12,8 @@ const boardArr = [[null, null, null], [null, null, null], [null, null, null]]
 const App = () => {
 
   const [players, setPlayers] = useState({
-    'X' : 'Player 1',
-    'O' : 'Player 2'
+    X : 'Player 1',
+    O : 'Player 2'
   })
   const [gameTurns , setGameTurns] = useState([])
   const [activePlayer, setActivePlayer] = useState('X')
@@ -26,7 +26,7 @@ const App = () => {
       gameBoard[row][col] = player
   }
 
-  let winner
+  let winner;
   for(const combination of winningCombinations){
     let firstSquareSymbol = gameBoard[combination[0].row][combination[0].col]
     let secondSquareSymbol = gameBoard[combination[1].row][combination[1].col]
@@ -80,8 +80,8 @@ const App = () => {
         <div id='gameContainer' className='col-12 col-sm-10 col-md-9 col-lg-8 col-xl-6'>
 
           <div id='players' className='col-12 highlight-player'>
-            <Player name="Player 1" symbol="X" isActive={activePlayer === 'X'} onChangeName={handleChangeName} />
-            <Player name="Player 2" symbol="O" isActive={activePlayer === 'O'} onChangeName={handleChangeName} />
+            <Player name={players.X} symbol="X" isActive={activePlayer === 'X'} onChangeName={handleChangeName} />
+            <Player name={players.O} symbol="O" isActive={activePlayer === 'O'} onChangeName={handleChangeName} />
           </div>
           
           {(winner || isDraw) && <GameOver winner={winner} onRestart={handleRematch} />}

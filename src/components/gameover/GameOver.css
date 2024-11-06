@@ -12,3 +12,8 @@
     animation: pop-in 0.9s cubic-bezier(0.68, -0.55, 0.65, 0.52) forwards;
     color: white;
   }
+
+  button{
+    height: 40px;
+    width: 80px;
+  }
